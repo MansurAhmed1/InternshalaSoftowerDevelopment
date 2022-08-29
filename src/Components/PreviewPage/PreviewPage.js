@@ -30,7 +30,7 @@ const PreviewPAGE = () => {
     fetch("https://hidden-anchorage-98570.herokuapp.com/event")
       .then((res) => res.json())
       .then((data) => {
-        setEvents(data);
+        setEvents([data[data.length-1]]);
         setLoadng(false);
       });
   }, []);
