@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <div className=' py-6 bg-white block lg:hidden sticky top-0 z-30 '>
+        <div className=' py-6 px-5 bg-white block lg:hidden sticky top-0 z-30 '>
                <button className=' w-8 h-8  hover:bg-transparent bg-transparent  border-0 rounded-none'>
         <label
               for="my-drawer-2"

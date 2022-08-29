@@ -90,14 +90,14 @@ const CreateEvent = () => {
             {" "}
             <button
               style={{ borderRadius: "20px" }}
-              className="text-red-600 border border-red-600  inline-block py-1 lg:px-12 px-10 "
+              className="text-red-600 border border-red-600  inline-block py-1 lg:px-12 px-2 "
             >
               Preview Page
             </button>
           </Link>
         </div>
       </div>
-      <h3 className="text-2xl py-5 text-gray-600 font-semibold">
+      <h3 className="text-2xl py-5 text-center lg:text-left  text-gray-600 font-semibold">
         {" "}
         Create Event
       </h3>
@@ -108,18 +108,18 @@ const CreateEvent = () => {
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="grid lg:grid-cols-2 grid-cols-1 ">
-          <div>
+          <div className="flex flex-col  items-center lg:items-start">
             
 
 
-            <div className="form-control w-3/4 ">
+            <div className="form-control items-center lg:items-start l w-3/4 ">
               {/* <label className="label">
                 <span className="label-text text-gray-500">Event Name</span>
               </label> */}
               <input
                 type="text"
                 placeholder=" Enter Event Name"
-                className="input input-bordered w-3/4 "
+                className="input input-bordered lg:w-3/4 w-full "
                 {...register("eventName", {
                   required: {
                     value: true,
@@ -136,13 +136,13 @@ const CreateEvent = () => {
               </label>
             </div>
 
-            <div className="form-control w-3/4 ">
+            <div className="form-control items-center lg:items-start l w-3/4 ">
               <label className="label">
-                <span className="label-text text-gray-500">Banner</span>
+                <span className="label-text text-left text-gray-500">Banner</span>
               </label>
               <input
                 type="file"
-                className="input input-bordered w-3/4 "
+                className="input input-bordered lg:w-3/4 w-full "
                 {...register("image", {
                   required: {
                     value: true,
@@ -161,7 +161,7 @@ const CreateEvent = () => {
 
            
 
-            <div className="form-control w-3/4 ">
+            <div className="form-control items-center lg:items-start l w-3/4 ">
               {/* <label className="label">
                 <span className="label-text text-gray-500">
                   Short Description
@@ -170,7 +170,7 @@ const CreateEvent = () => {
               <input
                 type="text"
                 placeholder=" Enter Short Description"
-                className="input input-bordered w-3/4 "
+                className="input input-bordered lg:w-3/4 w-full"
                 {...register("shortDescription", {
                   required: {
                     value: true,
@@ -187,13 +187,13 @@ const CreateEvent = () => {
               </label>
             </div>
 
-            <div className="form-control w-3/4 ">
+            <div className="form-control items-center lg:items-start l w-3/4 ">
               {/* <label className="label">
                 <span className="label-text text-gray-500">Description</span>
               </label> */}
 
               <textarea
-                className="border rounded  p-3 w-3/4 "
+                className="border rounded  p-3 lg:w-3/4 w-full "
                 placeholder="Please describe your service"
                 cols="30"
                 rows="4"
@@ -213,15 +213,15 @@ const CreateEvent = () => {
               </label>
             </div>
           </div>
-          <div className="lg:pl-28">
-            <div className="form-control w-3/4 ">
+          <div className="lg:pl-28  flex flex-col  items-center lg:items-start ">
+            <div className="form-control items-center lg:items-start l w-3/4 ">
               <label className="label">
                 <span className="label-text text-gray-500">
                   Choose Language
                 </span>
               </label>
               <select
-                className="input input-bordered  w-3/4 "
+                className="input input-bordered  lg:w-3/4 w-full "
                 {...register("language", {
                   required: {
                     value: true,
@@ -243,7 +243,7 @@ const CreateEvent = () => {
 
         
 
-            <div className="form-control w-3/4 ">
+            <div className="form-control items-center lg:items-start l w-3/4 ">
               {/* <label className="label">
                 <span className="label-text text-gray-500">time</span>
               </label> */}
@@ -252,7 +252,7 @@ const CreateEvent = () => {
                 //    value={user?.email}
 
                 placeholder="time (in INR)"
-                className="input input-bordered w-3/4 "
+                className="input input-bordered lg:w-3/4 w-full "
                 {...register("time", {
                   required: {
                     value: true,
@@ -269,7 +269,7 @@ const CreateEvent = () => {
               </label>
             </div>
 
-            <div className="form-control w-3/4 ">
+            <div className="form-control items-center lg:items-start l w-3/4 ">
               {/* <label className="label">
                 <span className="label-text text-gray-500">Duration</span>
               </label> */}
@@ -278,7 +278,7 @@ const CreateEvent = () => {
            
 
                 placeholder="Duration (in Minutes)"
-                className="input input-bordered w-3/4 "
+                className="input input-bordered lg:w-3/4 w-full "
                 {...register("duration", {
                   required: {
                     value: true,
@@ -295,7 +295,7 @@ const CreateEvent = () => {
               </label>
             </div>
 
-            <div className="form-control w-3/4 ">
+            <div className="form-control items-center lg:items-start l w-3/4 ">
               {/* <label className="label">
                 <span className="label-text text-gray-500">Date</span>
               </label> */}
@@ -304,7 +304,7 @@ const CreateEvent = () => {
                 //    value={user?.email}
 
                 placeholder="Enter Date"
-                className="input input-bordered w-3/4 "
+                className="input input-bordered lg:w-3/4 w-full "
                 {...register("date", {
                   required: {
                     value: true,
@@ -320,7 +320,7 @@ const CreateEvent = () => {
                 )}
               </label>
             </div>
-            <div className="form-control w-3/4 ">
+            <div className="form-control items-center lg:items-start l w-3/4 ">
               {/* <label className="label">
                 <span className="label-text text-gray-500">Event Link</span>
               </label> */}
@@ -329,7 +329,7 @@ const CreateEvent = () => {
           
 
                 placeholder=" Enter Event Link"
-                className="input input-bordered w-3/4 "
+                className="input input-bordered lg:w-3/4 w-full "
                 {...register("link", {
                   required: {
                     value: true,

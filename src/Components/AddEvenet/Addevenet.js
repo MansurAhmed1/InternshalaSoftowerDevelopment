@@ -8,8 +8,7 @@ const Addevenet = () => {
     <div className="px-6 py-7">
       <h3 className="text-2xl">Welcome Ravi</h3>
       <p className="py-3">
-        Natus corrupti in cumque beatae accusamus accusantium consequatur
-        recusandae vero laborum sint?
+       Please Create an event as soon as.
       </p>
       <Link to={"createEvent"}>
         {" "}
