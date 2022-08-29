@@ -5,11 +5,11 @@ import Addevenet from './Components/AddEvenet/Addevenet';
 import Dashboard from './Components/Dashboard';
 import CreateEvent from '././Components/CreateEvent/CreateEvent'
 import PreviewPage from './Components/PreviewPage/PreviewPage';
-import Header from './Components/Header/Header';
+
 function App() {
   return (
     <div className="App">
-      <Header></Header>
+     
 <Routes>
 <Route path='/' element={<Dashboard></Dashboard>}>
 <Route index element={<Addevenet></Addevenet>}></Route>
