@@ -83,7 +83,7 @@ const PreviewPAGE = () => {
                     icon={faClock}
                     class="text-blue-700 h-5 inline w-5"
                   />
-                  <span className="ml-2">{event.time} am</span>
+                  <span className="ml-2">{event.time}</span>
                 </p>
                 <p className="py-2 px-3">
                   <FontAwesomeIcon
@@ -102,7 +102,7 @@ const PreviewPAGE = () => {
                     icon={faDollar}
                     class="text-blue-700 inline h-5 w-5"
                   />{" "}
-                  <span className="ml-2 text-green-500 font-bold"> Free</span>
+                  <span className="ml-2 text-green-500 font-bold">{event.price}</span>
                 </p>
                 <p className="py-2 px-3">Duration-{event.duration} Minute</p>
               </div>

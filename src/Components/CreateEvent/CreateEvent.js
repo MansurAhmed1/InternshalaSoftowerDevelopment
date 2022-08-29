@@ -45,7 +45,8 @@ const CreateEvent = () => {
             time:data.time,
             duration:data.duration,
             date:data.date,
-            link:data.link
+            link:data.link,
+            price:data.price
 
 
           };
@@ -112,7 +113,7 @@ const CreateEvent = () => {
             
 
 
-            <div className="form-control items-center lg:items-start l w-3/4 ">
+            <div className="form-control  lg:items-start l w-3/4 ">
               {/* <label className="label">
                 <span className="label-text text-gray-500">Event Name</span>
               </label> */}
@@ -136,7 +137,7 @@ const CreateEvent = () => {
               </label>
             </div>
 
-            <div className="form-control items-center lg:items-start l w-3/4 ">
+            <div className="form-control  lg:items-start l w-3/4 ">
               <label className="label">
                 <span className="label-text text-left text-gray-500">Banner</span>
               </label>
@@ -161,7 +162,7 @@ const CreateEvent = () => {
 
            
 
-            <div className="form-control items-center lg:items-start l w-3/4 ">
+            <div className="form-control  lg:items-start l w-3/4 ">
               {/* <label className="label">
                 <span className="label-text text-gray-500">
                   Short Description
@@ -187,7 +188,7 @@ const CreateEvent = () => {
               </label>
             </div>
 
-            <div className="form-control items-center lg:items-start l w-3/4 ">
+            <div className="form-control  lg:items-start l w-3/4 ">
               {/* <label className="label">
                 <span className="label-text text-gray-500">Description</span>
               </label> */}
@@ -213,10 +214,10 @@ const CreateEvent = () => {
               </label>
             </div>
           </div>
-          <div className="lg:pl-28  flex flex-col  items-center lg:items-start ">
-            <div className="form-control items-center lg:items-start l w-3/4 ">
+          <div className="lg:pl-28 lg:-mt-10   flex flex-col  items-center lg:items-start ">
+            <div className="form-control  lg:items-start l w-3/4 ">
               <label className="label">
-                <span className="label-text text-gray-500">
+                <span className="label-text  text-gray-500">
                   Choose Language
                 </span>
               </label>
@@ -241,25 +242,70 @@ const CreateEvent = () => {
               </label>
             </div>
 
-        
-
-            <div className="form-control items-center lg:items-start l w-3/4 ">
+            <div className="form-control  lg:items-start l w-3/4 ">
               {/* <label className="label">
-                <span className="label-text text-gray-500">time</span>
+                <span className="label-text text-gray-500">
+                  Price
+                </span>
               </label> */}
               <input
-                type="time"
-                //    value={user?.email}
-
-                placeholder="time (in INR)"
+                type="text"
+                placeholder="Price (in INR)"
                 className="input input-bordered lg:w-3/4 w-full "
-                {...register("time", {
+                {...register("price", {
                   required: {
                     value: true,
-                    message: "time is Required"
+                    message: "price is Required"
                   }
                 })}
               />
+              <label className="label">
+                {errors.price?.type === "required" && (
+                  <span className="label-text text-gray-500-alt text-red-500">
+                    {errors.price.message}
+                  </span>
+                )}
+              </label>
+            </div>
+
+            <div className="form-control  lg:items-start l w-3/4 ">
+              <label className="label">
+                <span className="label-text text-gray-500">time</span>
+              </label>
+              
+                   <select
+                className="input input-bordered  lg:w-3/4 w-full "
+                {...register("time", {
+                  required: {
+                    value: true,
+                    message: "Time is Required"
+                  }
+                })}
+              >
+                <option value="1:00 pm">1:00 pm</option>
+                <option value="2:00 pm">2:00pm</option>
+                <option value="3:00 pm">3:00 pm</option>
+                <option value="4:00 pm">4:00pm</option>
+                <option value="5:00 pm">5:00 pm</option>
+                <option value="6:00 pm">6:00pm</option>
+                <option value="7:00 pm">7:00 pm</option>
+                <option value="8:00 pm">8:00pm</option>
+                <option value="9:00 pm">5:00 pm</option>
+                <option value="10:00 pm">6:00pm</option>
+                <option value="12:00 pm">7:00 pm</option>
+                <option value="1:00 pm">1:00am</option>
+                <option value="2:00 am">2:00 am</option>
+                <option value="3:00 am">3:00 am</option>
+                <option value="4:00 am">4:00 am</option>
+                <option value="5:00 am">5:00 am</option>
+                <option value="6:00 am">6:00 am</option>
+                <option value="7:00 am">7:00 am</option>
+                <option value="8:00 am">8:00 am</option>
+                <option value="9:00 am">5:00 am</option>
+                <option value="10:00 am">6:00 am</option>
+                <option value="12:00 am">7:00 am</option>
+              
+              </select>
               <label className="label">
                 {errors.time?.type === "required" && (
                   <span className="label-text text-gray-500-alt text-red-500">
@@ -269,7 +315,7 @@ const CreateEvent = () => {
               </label>
             </div>
 
-            <div className="form-control items-center lg:items-start l w-3/4 ">
+            <div className="form-control  lg:items-start l w-3/4 ">
               {/* <label className="label">
                 <span className="label-text text-gray-500">Duration</span>
               </label> */}
@@ -295,7 +341,7 @@ const CreateEvent = () => {
               </label>
             </div>
 
-            <div className="form-control items-center lg:items-start l w-3/4 ">
+            <div className="form-control  lg:items-start l w-3/4 ">
               {/* <label className="label">
                 <span className="label-text text-gray-500">Date</span>
               </label> */}
@@ -320,7 +366,7 @@ const CreateEvent = () => {
                 )}
               </label>
             </div>
-            <div className="form-control items-center lg:items-start l w-3/4 ">
+            <div className="form-control  lg:items-start l w-3/4 ">
               {/* <label className="label">
                 <span className="label-text text-gray-500">Event Link</span>
               </label> */}
