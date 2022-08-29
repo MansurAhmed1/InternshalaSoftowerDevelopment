@@ -8,8 +8,10 @@ import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 import { faVideo } from "@fortawesome/free-solid-svg-icons";
 import { faDollar } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import Loading from "../Loading/Loading";
 const PreviewPAGE = () => {
   const [events, setEvents] = useState([]);
+  const [loading, setLoadng] = useState(true);
   const months = [
     "Jan",
     "Feb",
@@ -27,13 +29,22 @@ const PreviewPAGE = () => {
   useEffect(() => {
     fetch("https://hidden-anchorage-98570.herokuapp.com/event")
       .then((res) => res.json())
-      .then((data) => setEvents(data));
+      .then((data) => {
+        setEvents(data);
+        setLoadng(false);
+      });
   }, []);
   console.log(events);
+  if(loading){
+    return <Loading></Loading>
+  }
   return (
     <div>
       {events.length === 0 ? (
-        <div style={{height:"100vh"}} className="flex justify-center items-center">
+        <div
+          style={{ height: "100vh" }}
+          className="flex justify-center items-center"
+        >
           {" "}
           <Link to={"/createEvent"}>
             {" "}
